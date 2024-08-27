@@ -10,6 +10,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.gestures.detectDragGestures
 import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -28,6 +29,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Size
@@ -54,8 +56,23 @@ class MainActivity : ComponentActivity() {
         setContent {
             TestingCanvasTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    MainScreen(modifier = Modifier.padding(top = innerPadding.calculateTopPadding()))
+//                    MainScreen(modifier = Modifier.padding(top = innerPadding.calculateTopPadding()))
+                    innerPadding.calculateTopPadding()
+                    RateYourExperienceScreen()
+                    return@Scaffold
+                    Box(
+                        modifier = Modifier
+                            .fillMaxSize()
+                    ) {
+                        Scale(
+                            modifier = Modifier
+                                .background(color = Color.Red)
+                                .align(Alignment.Center),
+                            style = ScaleStyle(scaleWidth = 150.dp)
+                        ) {
 
+                        }
+                    }
                 }
             }
         }
@@ -110,7 +127,7 @@ fun MainScreen(modifier: Modifier) {
             }
         }
 
-        BallClicker(enabled = isTimerRunning){
+        BallClicker(enabled = isTimerRunning) {
             points++
         }
     }
