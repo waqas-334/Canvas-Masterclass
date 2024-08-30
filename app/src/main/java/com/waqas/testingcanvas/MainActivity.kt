@@ -16,6 +16,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Button
@@ -58,16 +59,18 @@ class MainActivity : ComponentActivity() {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
 //                    MainScreen(modifier = Modifier.padding(top = innerPadding.calculateTopPadding()))
                     innerPadding.calculateTopPadding()
-                    RateYourExperienceScreen()
-                    return@Scaffold
+//                    RateYourExperienceScreen()
+//                    return@Scaffold
                     Box(
                         modifier = Modifier
                             .fillMaxSize()
+                            .background(color = Color.Cyan)
                     ) {
                         Scale(
                             modifier = Modifier
-                                .background(color = Color.Red)
-                                .align(Alignment.Center),
+                                .fillMaxWidth()
+                                .height(300.dp)
+                                .align(Alignment.BottomCenter),
                             style = ScaleStyle(scaleWidth = 150.dp)
                         ) {
 
