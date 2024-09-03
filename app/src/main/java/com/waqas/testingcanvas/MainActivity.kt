@@ -64,17 +64,24 @@ class MainActivity : ComponentActivity() {
                     Box(
                         modifier = Modifier
                             .fillMaxSize()
-                            .background(color = Color.Cyan)
                     ) {
-                        Scale(
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .height(300.dp)
-                                .align(Alignment.BottomCenter),
-                            style = ScaleStyle(scaleWidth = 150.dp)
-                        ) {
-
-                        }
+//                        IntroToPath()
+//                        PathOperations()
+//                        AnimatingPath()
+//                            TransformationAndClipping()
+//                        PathEffectTutorial()
+//                        TextOnPath()
+//                        GenderPicker(onGenderSelected = {})
+                        TicTacToe()
+//                        Scale(
+//                            modifier = Modifier
+//                                .fillMaxWidth()
+//                                .height(300.dp)
+//                                .align(Alignment.BottomCenter),
+//                            style = ScaleStyle(scaleWidth = 150.dp)
+//                        ) {
+//
+//                        }
                     }
                 }
             }
